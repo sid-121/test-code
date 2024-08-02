@@ -23,6 +23,7 @@ This repository contains Terraform configuration files to provision an EC2 insta
 # Assumptions
   - AWS Credentials: It is assumed that AWS credentials are configured in the local environment or via the default profile. The credentials are used to authenticate Terraform actions.
   - Key Pair: Ensure the key pair name specified in Terraform exists in AWS or is managed by Terraform.
+  - We have already created a bucket in our aws environment and created the resources as per problem statement.
 
 # Application Repository:
   - The application code is cloned from https://github.com/sid-121/exam-code.git. Ensure this repository is accessible and contains the app.py script.
