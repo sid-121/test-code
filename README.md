@@ -42,9 +42,9 @@ Ensure the aws_key_pair resource is correct.
 
 
 # Initialize Terraform:
- - terraform init  
- - terraform plan
- - terraform apply
+    terraform init  
+    terraform plan
+    terraform apply
 
 Confirm the action when prompted.
 
