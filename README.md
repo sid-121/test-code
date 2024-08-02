@@ -4,18 +4,18 @@
 # Overview
 This repository contains Terraform configuration files to provision an EC2 instance running a Http service on AWS. The setup includes the creation of necessary AWS resources such as EC2 instances, security groups, IAM roles, and key pairs.
 
-Design Decisions
-# 1.Infrastructure:
+# Design Decisions
+ Infrastructure:
   - EC2 Instance: Uses a small instance type (t2.micro) to minimize cost while providing sufficient resources for running a basic Flask application.
   - AMI: Configured to use an Ubuntu-based AMI to leverage Ubuntu's extensive community support and package availability.
   - Security Group: Allows inbound traffic on port 5000 to enable access to the Flask application from the internet.
 
-# 2.User Data Script:
+ User Data Script:
   - Installs necessary packages (python3-pip, git) and sets up the Flask application by cloning the repository and running it. 
   - Uses apt-get for package management as the instance is based on Ubuntu.
 
 
-# 3.IAM Role and Instance Profile: 
+ IAM Role and Instance Profile: 
   - Attaches an IAM role to the instance to manage permissions securely. 
   - Assumes an existing IAM role with necessary policies.
 
