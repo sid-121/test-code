@@ -11,7 +11,7 @@ This repository contains Terraform configuration files to provision an EC2 insta
   - Security Group: Allows inbound traffic on port 5000 to enable access to the Flask application from the internet.
 
  User Data Script:
-  - Installs necessary packages (python3-pip, git) and sets up the Flask application by cloning the repository and running it. 
+  - Installs necessary packages (python3-pip, git) and sets up the Flask application by cloning the repository and running it. You can find the script link here [https://github.com/sid-121/exam-code.git] which we used to achieve this solution
   - Uses apt-get for package management as the instance is based on Ubuntu.
 
 
@@ -56,6 +56,7 @@ Public IP: The public IP of the EC2 instance will be displayed upon successful T
  To destroy all resources created by Terraform:
   -     terraform destroy
 
-Troubleshooting
-InvalidKeyPair.NotFound: Ensure the key pair name matches exactly with the key pair in your AWS account or create a new key pair as described in the ec2.tf file.
-Instance Not Accessible: Verify that security group rules are correct and that the instance is running. Ensure that the Flask application is running and listening on the correct port.
+# Troubleshooting
+  - InvalidKeyPair.NotFound: Ensure the key pair name matches exactly with the key pair in your AWS account or create a new key pair as described in the ec2.tf file.
+  - Instance Not Accessible: Verify that security group rules are correct and that the instance is running.
+  - PortDetails: Ensure that the application is running and listening on the correct port.
