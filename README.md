@@ -33,9 +33,9 @@ This repository contains Terraform configuration files to provision an EC2 insta
   - AWS CLI: Install and configure the AWS CLI. Follow the AWS CLI installation guide if needed.
     
 # Configuration
-Clone the Repository:
- - git clone https://github.com/your-username/your-repo.git
- - cd your-repo
+Clone the Repository
+ -     git clone https://github.com/your-username/your-repo.git
+       cd your-repo
    
 Update Configuration: Edit the ec2.tf file to replace the ami ID with a valid Ubuntu AMI ID for your region.
 Ensure the aws_key_pair resource is correct.
