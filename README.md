@@ -1,4 +1,4 @@
-# Http Service on AWS EC2 with Terraform
+# HTTP Service on AWS EC2 with Terraform
 
 
 # Overview
@@ -52,10 +52,10 @@ Confirm the action when prompted.
 Public IP: The public IP of the EC2 instance will be displayed upon successful Terraform apply. Use this IP to access your Http Service in a web browser.
   example: http://ec2-ip:5000/list-bucket-content/dir1
 
-Cleaning Up
-To destroy all resources created by Terraform:
+# Cleaning Up
+ To destroy all resources created by Terraform:
+  -     terraform destroy
 
-terraform destroy
 Troubleshooting
 InvalidKeyPair.NotFound: Ensure the key pair name matches exactly with the key pair in your AWS account or create a new key pair as described in the ec2.tf file.
 Instance Not Accessible: Verify that security group rules are correct and that the instance is running. Ensure that the Flask application is running and listening on the correct port.
