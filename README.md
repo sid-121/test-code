@@ -10,7 +10,8 @@ Design Decisions
   - AMI: Configured to use an Ubuntu-based AMI to leverage Ubuntu's extensive community support and package availability.
   - Security Group: Allows inbound traffic on port 5000 to enable access to the Flask application from the internet.
 
-# 2.User Data Script: Installs necessary packages (python3-pip, git) and sets up the Flask application by cloning the repository and running it. Uses apt-get for package management as the instance is based on Ubuntu.
+# 2.User Data Script:
+    Installs necessary packages (python3-pip, git) and sets up the Flask application by cloning the repository and running it. Uses apt-get for package management as the instance is based on Ubuntu.
 
 # 3.Key Pair: Manages SSH access to the EC2 instance through a key pair. A new key pair is created and used for SSH access, and the public key is expected to be available locally.
 IAM Role:
