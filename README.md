@@ -11,15 +11,18 @@ Design Decisions
   - Security Group: Allows inbound traffic on port 5000 to enable access to the Flask application from the internet.
 
 # 2.User Data Script:
-    Installs necessary packages (python3-pip, git) and sets up the Flask application by cloning the repository and running it. Uses apt-get for package management as the instance is based on Ubuntu.
+  - Installs necessary packages (python3-pip, git) and sets up the Flask application by cloning the repository and running it. 
+  - Uses apt-get for package management as the instance is based on Ubuntu.
 
-# 3.Key Pair: Manages SSH access to the EC2 instance through a key pair. A new key pair is created and used for SSH access, and the public key is expected to be available locally.
-IAM Role:
 
-# 4.IAM Role and Instance Profile: Attaches an IAM role to the instance to manage permissions securely. Assumes an existing IAM role with necessary policies.
-Assumptions
-# 5.AWS Credentials: It is assumed that AWS credentials are configured in the local environment or via the default profile. The credentials are used to authenticate Terraform actions.
-# 6.Key Pair: Ensure the key pair name specified in Terraform exists in AWS or is managed by Terraform.
+# 3.IAM Role and Instance Profile: 
+  - Attaches an IAM role to the instance to manage permissions securely. 
+  - Assumes an existing IAM role with necessary policies.
+
+
+# Assumptions
+  - AWS Credentials: It is assumed that AWS credentials are configured in the local environment or via the default profile. The credentials are used to authenticate Terraform actions.
+  - Key Pair: Ensure the key pair name specified in Terraform exists in AWS or is managed by Terraform.
 
 # Application Repository:
   - The application code is cloned from https://github.com/sid-121/exam-code.git. Ensure this repository is accessible and contains the app.py script.
